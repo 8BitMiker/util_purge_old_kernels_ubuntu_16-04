@@ -38,7 +38,7 @@ my $path = '/boot/';
 # As a one liner
 # -------------------------------------------
 
-#  cd /boot && ls | perl -nle 'BEGIN{ $r = qr~(\d[\w\.-]+)~; ($k) = `uname -r` =~ m~$r~ } print if qq~$_~ !~  m~$k~ and (m~$r~)' | xargs -n 1 sudo rm
+# cd /boot && ls | perl -nle 'BEGIN{ $r = qr~(\d[\w\.-]+)~; ($k) = `uname -r` =~ m~$r~ } print if $_ !~  m~$k~ and (m~$r~)' | xargs -n 1 sudo rm
 
 # -------------------------------------------
 # Gather current kernel info
